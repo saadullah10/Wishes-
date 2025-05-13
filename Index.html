@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Eid al-Adha 2025 Greetings - Share wishes, vote on Qurbani animals, and countdown to Eid">
+    <meta name="keywords" content="Eid, Eid ul Adha 2025, Qurbani, Islamic Greetings">
+    <title>Eid al-Adha 2025 Mubarak - Greetings & Countdown</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --islamic-green: #0a5a4a;
+            --gold: #c5a47e;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: var(--islamic-green) url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIklEQVQIW2NkQAKrVq36zwjjgzhhYWGMYAEYB8RmROaABADeOQ8CXl/xfgAAAABJRU5ErkJggg==');
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .countdown {
+            background: rgba(0,0,0,0.5);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .animals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .animal-card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            color: var(--islamic-green);
+            transition: transform 0.3s;
+        }
+
+        .animal-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .animal-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--gold);
+            margin: 10px auto;
+        }
+
+        .greeting-box {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid var(--gold);
+        }
+
+        #ads-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .animals-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Ad Unit -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+            data-ad-slot="1234567890"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+        <header>
+            <h1>🕌 Eid al-Adha 2025 Mubarak! 🌙</h1>
+            <div class="countdown" id="countdown">
+                <h2>Time Until Eid:</h2>
+                <div id="timer">Loading...</div>
+            </div>
+        </header>
+
+        <div class="greeting-box">
+            <input type="text" id="nameInput" placeholder="Enter Your Name">
+            <button onclick="generateGreeting()">Create Greeting</button>
+            <div id="greetingOutput"></div>
+            <div id="socialShare" style="margin-top: 10px;"></div>
+        </div>
+
+        <div class="animals-grid">
+            <div class="animal-card">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmZiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjIwIj5Hb2F0PC90ZXh0Pjwvc3ZnPg==" class="animal-img" alt="Qurbani Goat">
+                <h3>Goat</h3>
+                <button onclick="vote('goat')">Vote</button>
+                <div class="percentage" id="goat-percentage">0%</div>
+            </div>
+            <!-- Repeat for other animals with different base64 images -->
+            <div class="animal-card">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmZiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjIwIj5TaGVlcDwvdGV4dD48L3N2Zz4=" class="animal-img" alt="Qurbani Sheep">
+                <h3>Sheep</h3>
+                <button onclick="vote('sheep')">Vote</button>
+                <div class="percentage" id="sheep-percentage">0%</div>
+            </div>
+            <div class="animal-card">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmZiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjIwIj5DYW1lbDwvdGV4dD48L3N2Zz4=" class="animal-img" alt="Qurbani Camel">
+                <h3>Camel</h3>
+                <button onclick="vote('camel')">Vote</button>
+                <div class="percentage" id="camel-percentage">0%</div>
+            </div>
+            <div class="animal-card">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmZiIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LXNpemU9IjIwIj5CdWxsPC90ZXh0Pjwvc3ZnPg==" class="animal-img" alt="Qurbani Bull">
+                <h3>Bull</h3>
+                <button onclick="vote('bull')">Vote</button>
+                <div class="percentage" id="bull-percentage">0%</div>
+            </div>
+        </div>
+
+        <div id="ads-container">
+            <!-- Additional Ads -->
+        </div>
+    </div>
+
+    <script>
+        // Countdown Timer
+        const eidDate = new Date('2025-06-06T00:00:00').getTime();
+        const timerElement = document.getElementById('timer');
+
+        function updateTimer() {
+            const now = new Date().getTime();
+            const diff = eidDate - now;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            
+            if (diff < 0) {
+                clearInterval(timerInterval);
+                timerElement.innerHTML = "Eid Mubarak! 🎉";
+            }
+        }
+        let timerInterval = setInterval(updateTimer, 1000);
+        updateTimer();
+
+        // Voting System
+        let votes = JSON.parse(localStorage.getItem('eidVotes')) || {
+            goat: 0,
+            sheep: 0,
+            camel: 0,
+            bull: 0
+        };
+
+        function vote(animal) {
+            votes[animal]++;
+            localStorage.setItem('eidVotes', JSON.stringify(votes));
+            updatePercentages();
+        }
+
+        function updatePercentages() {
+            const total = Object.values(votes).reduce((a, b) => a + b, 0);
+            for (const [animal, count] of Object.entries(votes)) {
+                const percentage = total > 0 ? Math.round((count / total) * 100) : 0;
+                document.getElementById(`${animal}-percentage`).textContent = `${percentage}%`;
+            }
+        }
+        updatePercentages();
+
+        // Greeting Generator
+        function generateGreeting() {
+            const name = document.getElementById('nameInput').value.trim();
+            const output = document.getElementById('greetingOutput');
+            const socialShare = document.getElementById('socialShare');
+            
+            if (!name) {
+                output.innerHTML = '<p style="color: red">Please enter a name!</p>';
+                return;
+            }
+
+            const greeting = `🎉 Eid Mubarak, ${name}! 🌙<br>May your sacrifices be accepted and your days be filled with blessings.`;
+            output.innerHTML = `<div class="animal-card" style="background:var(--gold);color:white">${greeting}</div>`;
+            
+            socialShare.innerHTML = `
+                <button onclick="shareOnWhatsApp()">WhatsApp</button>
+                <button onclick="shareOnFacebook()">Facebook</button>
+            `;
+        }
+
+        // Social Sharing
+        function shareOnWhatsApp() {
+            const text = encodeURIComponent(document.getElementById('greetingOutput').innerText);
+            window.open(`https://wa.me/?text=${text}`);
+        }
+
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`);
+        }
+    </script>
+</body>
+              </html>
